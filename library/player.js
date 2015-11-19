@@ -1,4 +1,4 @@
-var Coin = require('coin.js').Coin;
+// var Coin = require('coin.js').Coin;
 
 var generateCoins = function(color){
 	var coins = [];

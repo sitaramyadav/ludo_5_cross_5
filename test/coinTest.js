@@ -1,5 +1,5 @@
 var chai = require('chai');
-var lib = require('./coinLogic.js').lib;
+var lib = require('../library/coinLogic.js').lib;
 var assert = chai.assert;
 var should = chai.should();
 
