@@ -1,4 +1,6 @@
+
 var Coin = require('./coinLogic.js').lib.Coin;
+
 
 var generateCoins = function(color){
 	var coins = [];
