@@ -13,8 +13,7 @@ describe('Player',function() {
 	});
 	it('has 4 coins',function() {
 		var player = new Player('samantha','red');
-		expect(player.coins).to.have.length(4)
+		expect(player.coins).to.have.length(4);
 		expect(player.coins[0]).to.be.instanceof(Coin);
-
 	});
 })
