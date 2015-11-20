@@ -1,10 +1,12 @@
 var chai = require('chai');
-var lib = require('./coinLogic.js').lib;
+var lib = require('../library/coinLogic.js').lib;
 var assert = chai.assert;
 var should = chai.should();
 
 describe('coin constructor',function(){
 	var coin = new lib.Coin;
+	var otherCoin = new lib.Coin('Purple');
+
 	it('should have only three fields',function(){
 		assert.equal(Object.keys(coin).length,3);
 	})
@@ -33,5 +35,11 @@ describe('coin constructor',function(){
 			coin.die();
 			assert.deepEqual(coin.position,[0,0]);
 		})
+	})
+})
+
+describe('coin movement checking ',function(){
+	it(' coinMovement takes current position as input and gives the path through which cointravells ',function(){
+		
 	})
 })
