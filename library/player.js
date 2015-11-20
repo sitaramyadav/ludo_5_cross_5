@@ -15,9 +15,7 @@ var Player = function(name,color){
 }
 
 Player.prototype = {
-	hasAKill : function(){
-		
-	}
+	
 };
 
 exports.Player = Player;
