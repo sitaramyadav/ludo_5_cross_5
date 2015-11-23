@@ -3,7 +3,8 @@ var module = {};
 exports.module = module;
 
 var grid = function(){
-	return ld.chunk(new Array(25),5);
+	var grid = ld.fill(Array(25),{coin:[],isSafe:false});
+	return ld.chunk(grid,5);
 };
 
 module.routes = {
@@ -25,21 +26,14 @@ var generateIndexs = function(place){
 	return array;
 };
 
-var indexOfSafeZones = function(){
-	return generateIndexs(0);
-};
-
-var giveEntryPoints = function(){
-	return generateIndexs(15);
-};
-
 var gridWithSafeZones = function(grid,points){
 	points.forEach(function(x){
-		grid[x[0]][x[1]] = 'safe zone';
+		grid[x[0]][x[1]] = {coin:[],isSafe:true};
 	});
 	return grid;
 };
 
-module.safeZones = indexOfSafeZones();
-module.entryPoints = giveEntryPoints();
+module.safeZones = generateIndexs(0);
+module.entryPoints = generateIndexs(15);
 module.grid = gridWithSafeZones(grid(),module.safeZones);
+console.log(module.grid);
