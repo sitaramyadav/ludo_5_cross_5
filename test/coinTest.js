@@ -4,8 +4,8 @@ var assert = chai.assert;
 var should = chai.should();
 
 describe('coin constructor',function(){
-	var coin = new lib.Coin;
-	var otherCoin = new lib.Coin('Purple');
+	var coin = new lib.Coin('blue');
+	var otherCoin = new lib.Coin('red');
 
 	it('should have only three fields',function(){
 		assert.equal(Object.keys(coin).length,3);
@@ -36,10 +36,9 @@ describe('coin constructor',function(){
 			assert.deepEqual(coin.position,[0,0]);
 		})
 	})
-})
-
-describe('coin movement checking ',function(){
-	it(' coinMovement takes current position as input and gives the path through which cointravells ',function(){
-		
+	describe('the move function updates the path of the coin movement',function(){
+		it('should give the path according to the dice value',function(){
+			assert.deepEqual(coin.path,[[4,3],[4,4],[3,4],[2,4]])
+		})
 	})
 })
