@@ -3,7 +3,7 @@ var assert = chai.assert;
 var expect = chai.expect;
 var should = chai.should;
 var Player = require('../library/player.js').Player;
-var Coin = require('../library/coinLogic.js').lib.Coin;
+var Coin = require('../library/coin.js').Coin;
 
 describe('Player',function() {
 	it('has fields name,color,kill,coins',function() {

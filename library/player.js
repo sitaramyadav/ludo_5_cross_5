@@ -1,5 +1,5 @@
 
-var Coin = require('./coinLogic.js').lib.Coin;
+var Coin = require('./coin.js').Coin;
 
 
 var generateCoins = function(color){

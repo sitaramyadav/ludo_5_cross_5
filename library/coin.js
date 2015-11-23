@@ -1,4 +1,4 @@
-exports.Coin = function(colour,id){
+var Coin = function(colour,id){
 	this.colour = colour;
 	this.position = [0,0];
 	this.id = id;
@@ -14,3 +14,6 @@ Coin.prototype = {
 		this.position = [0,0];
 	}   
 }
+
+
+exports.Coin = Coin;

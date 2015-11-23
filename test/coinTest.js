@@ -1,11 +1,11 @@
 var chai = require('chai');
-var lib = require('../library/coinLogic.js').lib;
+var Coin = require('../library/coin.js').Coin;
 var assert = chai.assert;
 var should = chai.should();
 
 describe('coin constructor',function(){
-	var coin = new lib.Coin('blue');
-	var otherCoin = new lib.Coin('red');
+	var coin = new Coin('blue');
+	var otherCoin = new Coin('red');
 
 	it('should have only three fields',function(){
 		assert.equal(Object.keys(coin).length,3);
