@@ -1,27 +1,15 @@
 var ld = require('lodash');
-var module = {};
-exports.module = module;
+var routes=require('./routes.js').routes;
 
 var grid = function(){
 	var grid = ld.fill(Array(25),{coin:[],isSafe:false});
 	return ld.chunk(grid,5);
 };
 
-module.routes = {
-	green : [[4,2],[4,3],[4,4],[3,4],[2,4],[1,4],[0,4],[0,3],[0,2],[0,1],[0,0],[1,0],
-				[2,0],[3,0],[4,0],[4,1],[3,1],[2,1],[1,1],[1,2],[1,3],[2,3],[3,3],[3,2],[2,2]],
-	blue : [[0,2],[0,1],[0,0],[1,0],[2,0],[3,0],[4,0],[4,1],[4,2],[4,3],[4,4],[3,4],
-				[2,4],[1,4],[0,4],[0,3],[1,3],[2,3],[3,3],[3,2],[3,1],[2,1],[1,1],[1,2],[2,2]],
-	red : [[2,4],[1,4],[0,4],[0,3],[0,2],[0,1],[0,0],[1,0],[2,0],[3,0],[4,0],[4,1],
-				[4,2],[4,3],[4,4],[3,4],[3,3],[3,2],[3,1],[2,1],[1,1],[1,2],[1,3],[2,3],[2,2]],
-	yellow : [[2,0],[3,0],[4,0],[4,1],[4,2],[4,3],[4,4],[3,4],[2,4],[1,4],[0,4],[0,3],
-				[0,2],[0,1],[0,0],[1,0],[1,1],[1,2],[1,3],[2,3],[3,3],[3,2],[3,1],[2,1],[2,2]]
-};
-
 var generateIndexs = function(place){
 	var array = [];
-	for(i in module.routes){
-		array.push(module.routes[i][place]);
+	for(i in routes){
+		array.push(routes[i][place]);
 	};
 	return array;
 };
@@ -33,7 +21,8 @@ var gridWithSafeZones = function(grid,points){
 	return grid;
 };
 
-module.safeZones = generateIndexs(0);
-module.entryPoints = generateIndexs(15);
-module.grid = gridWithSafeZones(grid(),module.safeZones);
-console.log(module.grid);
+exports.Board=function(){
+	this.safeZones = generateIndexs(0);
+	this.entryPoints = generateIndexs(15);
+	this.board = gridWithSafeZones(grid(),this.safeZones);
+};
