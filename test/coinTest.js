@@ -36,9 +36,4 @@ describe('coin constructor',function(){
 			assert.deepEqual(coin.position,[0,0]);
 		})
 	})
-	describe('the move function updates the path of the coin movement',function(){
-		it('should give the path according to the dice value',function(){
-			assert.deepEqual(coin.path,[[4,3],[4,4],[3,4],[2,4]])
-		})
-	})
 })
