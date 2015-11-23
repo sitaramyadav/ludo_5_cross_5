@@ -1,10 +1,13 @@
-exports Coin = function(colour,id){
+var lib = {};
+exports.lib = lib;
+
+lib.Coin = function(colour,id){
 	this.colour = colour;
 	this.position = [0,0];
 	this.id = id;
 }
 
-Coin.prototype = {
+lib.Coin.prototype = {
 	previousPosition : [0,0],
 	move : function(finalPosition){
 		this.previousPosition = this.position;
