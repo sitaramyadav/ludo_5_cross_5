@@ -1,19 +1,55 @@
-server(){    ===>
-it has property{
-	God
-}
-	God()  -which is function or we can call it handler
-	createBoard(){
-	return {'initilizedboard'}
-	 }
-	}
+			LUDO 5*5
+			--------
 
-	It is main function
-	if which has a board()
-Board() ====>
-Players() ===>
-coins() ===>
-dice() ===>
+=>	About Ludo 5*5
+	--------------
+	Ludo is an 4 player game(atleast 2).The board is a 5*5 in size.
+	There have 4 safe zones,one home.Home is the destination.
+
+=>	Rules
+	-----
+	1.	Four coins for each player.
+	2.	player atleast 2 & maximum 4.
+	3.	Need 6 in dice to start the game for each user to move their coin.
+	4.	There are 4 safe zones.
+	5.	Second chance for rolling dice while get's 6 in dice& also when kill's any coin.
+	6.	We can't kill the coin when it is in safe zone.
+	7.	If a player kill atleast one coin of other player,then he can enter to the inner 	loop.
+	8.	The died coin should start from beginnig.
+	9.	The player will win the game pnly when his all coin reach destination.
+	10.	Game over .
+
+=>	Architecture
+	------------
+	=>	Board with 5*5 grid.
+	=>	Boad keep coins when started.
+	=>	Player home keep coins before starting & while dead.
+	=>	Dice on the form.
+=>	Modelling
+	---------
+	Entities
+	---------
+		-> Board
+			->Create with safe zones & home(destination)-while god said to initialise.
+			->All cell are objects.
+			->Each objects keeps info of coins while coins is there in the cell.
+			->Check is there is any coin before updating when move of coin occured.
+			->Also checks coin is in safe zone.
+		->Coin
+			->Have fields color,id,position,die.
+			->Have a function move();
+			->
+		->Player
+			->Have the fields name,color,coions,kill.
+			->choosing coin,
+			->rolling dice.
+		->dice
+			->giving number while player asked to roll the dice.
+
+			 
+
+
+
 
 
 
