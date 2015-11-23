@@ -1,0 +1,19 @@
+server(){    ===>
+it has property{
+	God
+}
+	God()  -which is function or we can call it handler
+	createBoard(){
+	return {'initilizedboard'}
+	 }
+	}
+
+	It is main function
+	if which has a board()
+Board() ====>
+Players() ===>
+coins() ===>
+dice() ===>
+
+
+
