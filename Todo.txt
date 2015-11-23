@@ -1,3 +1,4 @@
+
 			LUDO 5*5
 			--------
 
@@ -47,9 +48,5 @@
 			->giving number while player asked to roll the dice.
 
 			 
-
-
-
-
 
 

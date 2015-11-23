@@ -20,9 +20,9 @@ var gridWithSafeZones = function(grid,points){
 	});
 	return grid;
 };
-
 exports.Board=function(){
 	this.safeZones = generateIndexs(0);
 	this.entryPoints = generateIndexs(15);
 	this.board = gridWithSafeZones(grid(),this.safeZones);
 };
+

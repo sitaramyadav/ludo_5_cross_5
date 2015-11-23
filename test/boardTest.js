@@ -25,6 +25,16 @@ describe('board',function(){
 	it('cell in grid should have property isSafe',function(){
 		expect(grid.board[0][0]).to.have.property('isSafe');
 	});
+	it('grid',function(){
+		expect(grid.board[0]).to.include({coin:[],isSafe:false});
+		expect(grid.board[0]).to.include({coin:[],isSafe:true});
+	});
+	it('cell in grid should have property coin',function(){
+		expect(grid.board[0][0]).to.have.property('coin');
+	});
+	it('cell in grid should have property isSafe',function(){
+		expect(grid.board[0][0]).to.have.property('isSafe');
+	});
 	it('safe points in the grid',function(){
 		assert.deepEqual([[4,2],[0,2],[2,4],[2,0]],grid.safeZones)
 	});
