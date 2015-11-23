@@ -1,0 +1,30 @@
+{
+  "name": "ludo_5_cross_5",
+  "version": "1.0.0",
+  "description": "Each player has 4 objects (4 elements) Max 4 and min 2 player can play the game. Player should play one after other & other players should be locked when one is playing. Only one magical number 6 is used to enter into the board. If the player gets that number ,he will have chance to play again. Onc player can kills another player if the position is same .The player gets another chance to Play and the killed player goes back to his home (starting position) There is safe 4 safe zone which indicated with the red color ,if player is on safe zone another player can't kill. The first player who completes by reaching all his 4 objects to the final desination is won the game. Game over.",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sitaramyadav/ludo_5_cross_5.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sitaramyadav/ludo_5_cross_5/issues"
+  },
+  "homepage": "https://github.com/sitaramyadav/ludo_5_cross_5#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  },
+  "dependencies": {
+    "lodash": "^3.10.1"
+  }
+}
