@@ -1,9 +1,11 @@
 var chai = require('chai');
 var lib = require('../library/gameMaster.js').lib;
-var board = require('../library/board.js').module;
+var board = require('../library/board.js').Board;
 var ld = require('lodash');
 var assert = chai.assert;
 var should = chai.should();
+board = new board;
+board = board.board;	
 
 describe('master',function(){
 	var players = lib.createPlayers(3);
@@ -21,7 +23,7 @@ describe('master',function(){
 		})
 		it('onCoinMove kills the other coin if the place is not in safe zone',function(){
 			players[1].coins[2].position = [0,1];
-			board.grid[0][1].coin.push(players[1].coins[2])
+			board[0][1].coin.push(players[1].coins[2])
 			players[0].coins[3].position = [0,2];
 			lib.onCoinMove(players[0],3,1,board);
 			assert.deepEqual([0,1],players[0].coins[3].position);
@@ -29,7 +31,7 @@ describe('master',function(){
 		})
 		it('if there is other coin in the position and the place is safe , then it wont kill the other coin .The place holds more than two coins ',function(){
 		 	players[1].coins[2].position = [4,2];
-			board.grid[4][2].coin.push(players[1].coins[2])
+			board[4][2].coin.push(players[1].coins[2])
 			players[0].coins[3].position = [7,7];
 			lib.onCoinMove(players[0],3,1,board);
 			assert.deepEqual([4,2],players[0].coins[3].position);

@@ -31,7 +31,7 @@ lib.onCoinMove = function(player,coinNum,diceValue,board){
 	currentIndex = (JSON.stringify(coin.position)=='[7,7]')?-1:currentIndex;
 	currentIndex=currentIndex+diceValue;
 	var newPosition = route[currentIndex];
-	var cell = board.grid[newPosition[0]][newPosition[1]];
+	var cell = board[newPosition[0]][newPosition[1]];
 	if(cell.coin.length>0 && (cell.isSafe==false)){
 		var otherCoin = cell.coin[0];
 		otherCoin.die();
