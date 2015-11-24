@@ -37,9 +37,9 @@ describe('master',function(){
 			assert.deepEqual([4,2],players[0].coins[3].position);
 			assert.deepEqual([4,2],players[1].coins[2].position);
 		 })
-		// it('in safe places there are more than one coins ',function(){
-		// 	console.log(board.grid[4][2].coin.length)
-		// 	// assert.deepEqual(,2)
-		// })
+		it('in safe places there are more than one coins ',function(){
+			// console.log(board.grid[4][2].coin.length)
+			// assert.deepEqual(3,2)
+		})
 	})
 })
