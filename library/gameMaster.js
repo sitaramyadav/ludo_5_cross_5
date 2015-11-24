@@ -27,5 +27,8 @@ lib.onCoinMove = function(player,coinNum,diceValue,board){
 		otherCoin.die();
 		player.kill++;
 	}
+	if(cell.isSafe==true){
+		cell.coin.push(coin);
+	}
 	coin.move(newPosition);
 }
