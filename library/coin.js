@@ -1,19 +1,22 @@
-var Coin = function(colour,id){
-	this.colour = colour;
-	this.position = [7,7];
-	this.id = id;
-	this.previousPosition = [7,7]
-}
+var Coin=function(id,colour) {
+	this._id=id;
+	this._colour=colour;
+	this._position=null;
+};
 
-Coin.prototype = {
-	move : function(finalPosition){
-		this.previousPosition = this.position;
-		this.position = finalPosition;
+Coin.prototype={
+	isSameColourAs:function(otherCoin) {
+		return this._colour==otherCoin._colour;
 	},
-	die : function(){
-		this.position = [7,7];
-	}   
-}
+	getPosition	: function(){
+		return this._position;
+	},
+	updatePosition : function(position){
+		this._position = position;
+	},
+	die:function(){
+		this._position = null;
+	}
+};
 
-
-exports.Coin = Coin;
+module.exports=Coin;

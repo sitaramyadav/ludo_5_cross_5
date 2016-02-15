@@ -1,0 +1,123 @@
+<link rel="stylesheet" href="css/board.css"></link>
+<link rel="stylesheet" href="css/colors.css">
+<script type="text/javascript" src="js/board.js"></script>
+
+<div class="main-container">
+
+	<div id="win-modal" class="winner-container">
+		<div>
+			<div id="win-text-div">
+ 					<img src="/images/winner-modal.png" />
+ 					<div id="winner-name">
+ 						<!-- winner name -->
+ 					</div>
+         	</div>
+			<button id="continue" type="button" class="btn-continue" onclick="onContinueClick()">continue</button>
+		</div>
+	</div>
+
+	<div class="board-container">
+		<div>
+			<div id="h3" class="home center ">
+				<div><label class="player3" ></label><br></div>
+				<button type="button" id="c-9" class="coin red"></button>
+				<button type="button" id="c-10" class="coin red"></button>
+				<button type="button" id="c-11" class="coin red"></button>
+				<button type="button" id="c-12" class="coin red"></button>
+			</div>
+		</div>
+		<div class="table-holder">
+			<div id="h4" class="side-home ">
+				<div><label class="player4" ></label><br></div>
+				<button type="button" id="c-13" class="coin green"></button>
+				<button type="button" id="c-14" class="coin green"></button>
+				<button type="button" id="c-15" class="coin green"></button>
+				<button type="button" id="c-16" class="coin green"></button>
+			</div>
+			<table id="board">
+				<tr>
+					<td id="00" class="tile"></td>
+					<td id="01" class="tile"></td>
+					<td id="02" class="tile safe"></td>
+					<td id="03" class="tile"></td>
+					<td id="04" class="tile"></td>
+				</tr>
+				<tr>
+					<td id="10" class="tile"></td>
+					<td id="11" class="tile"></td>
+					<td id="12" class="tile"></td>
+					<td id="13" class="tile"></td>
+					<td id="14" class="tile"></td>
+				</tr>
+				<tr>
+					<td id="20" class="tile safe"></td>
+					<td id="21" class="tile"></td>
+					<td id="22" class="tile safe"></td>
+					<td id="23" class="tile"></td>
+					<td id="24" class="tile safe"></td>
+				</tr>
+				<tr>
+					<td id="30" class="tile"></td>
+					<td id="31" class="tile"></td>
+					<td id="32" class="tile"></td>
+					<td id="33" class="tile"></td>
+					<td id="34" class="tile"></td>
+				</tr>
+				<tr>
+					<td id="40" class="tile"></td>
+					<td id="41" class="tile"></td>
+					<td id="42" class="tile safe"></td>
+					<td id="43" class="tile"></td>
+					<td id="44" class="tile"></td>
+				</tr>
+			</table>
+			<div id="h2" class="side-home ">
+				<div><label class="player2" ></label><br></div>
+				<button type="button" id="c-5" class="coin blue"></button>
+				<button type="button" id="c-6" class="coin blue"></button>
+				<button type="button" id="c-7" class="coin blue"></button>
+				<button type="button" id="c-8" class="coin blue"></button>
+
+			</div>
+		</div>
+		<div>
+			<div id="h1" class="home center ">
+				<div><label class="player1" ></label><br></div>
+				<button type="button" id="c-1" class="coin yellow"></button>
+				<button type="button" id="c-2" class="coin yellow"></button>
+				<button type="button" id="c-3" class="coin yellow"></button>
+				<button type="button" id="c-4" class="coin yellow"></button>
+			</div>
+		</div>
+	</div>
+	<div class="status">
+		<div class="status-bar">
+			<div class="status-container center">
+				<div class="profile">
+					<img src="images/man_brown.png" />
+				</div>
+				<label id="username" style="text-align:center"></label>
+				<div class="score-bar">
+					<div class="cut" title="Kills">
+						<img src="images/sword.png" />
+						<label id="cut-lbl">0</label>
+					</div>
+					<div class="final" title="Destination">
+						<img src="images/winner.png" />
+						<label id="final-lbl">0</label>
+					</div>
+					<div class="shed" title="Home">
+						<img src="images/home.png" />
+						<label id="shed-lbl">4</label>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="dice-bar">
+			<button type="button" class="dice">
+				<img src="images/d1.gif" alt="dice" />
+			</button>
+			<label class="dice-lbl"></label>
+		</div>
+	</div>
+</div>

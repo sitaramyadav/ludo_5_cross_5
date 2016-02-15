@@ -1,0 +1,78 @@
+h1 {
+  text-align: center;
+  font-style: "Open Sans";
+}
+.header {
+  width: 100vw;
+  height: 7vh;
+  top: 0;
+  left: 0;
+  position: fixed;
+  background-color: teal;
+}
+.content-place-holder {
+  width: 100vw;
+  height: 93vh;
+  top: 7vh;
+  left: 0;
+  overflow: scroll;
+  position: fixed;
+  background-color: lightgray;
+}
+img {
+  height: 30px;
+  width: 100%;
+  left: 90%;
+  top: 20%;
+}
+#menu {
+  position: inline;
+  margin-top: -50px;
+  float: right;
+  margin-right: 90px;
+}
+#menu ul {
+  list-style: none;
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0
+}
+#menu ul a {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 15px;
+  line-height: 32px;
+  padding: 0 15px;
+}
+#menu ul {
+  display: block;
+  color: #333;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 32px;
+  padding: 0 25px;
+}
+#menu ul li {
+  position: relative;
+  float: left;
+  margin: 0;
+  padding: 0 15px;
+}
+#menu ul li:hover {
+  background: #f6f6f6;
+}
+#menu ul ul {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #fff;
+  padding: 0
+}
+#menu ul li:hover > ul {
+  display: block
+}
