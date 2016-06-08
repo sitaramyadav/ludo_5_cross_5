@@ -27,7 +27,7 @@ Croupier.prototype = {
     });
   },
   endGame: function(id) {
-    var indexOfGame = ld.findIndex(this._games, getGameById(id));
+    var indexOfGame = ld.findIndex(this._games, this.getGameById(id));
     if (indexOfGame != -1)
       this._games.splice(indexOfGame, 1);
   }
