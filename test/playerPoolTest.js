@@ -1,4 +1,4 @@
-var PlayerPool = require('../library/playerPool');
+var PlayerPool = require('../library/PlayerPool');
 var assert = require('chai').assert;
 var sinon = require('sinon');
 var ld = require('lodash');
