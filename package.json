@@ -24,17 +24,18 @@
   },
   "homepage": "https://github.com/sitaramyadav/ludo_5_cross_5#readme",
   "devDependencies": {
-    "chai": "^3.4.1",
-    "mocha": "^2.3.4",
-    "sinon": "^1.17.2",
-    "supertest": "^1.1.0"
+    "chai": "^4.2.0"
   },
   "dependencies": {
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
-    "lodash": "^3.10.1",
-    "passport-facebook": "^2.1.1"
+    "lodash": "^4.17.15",
+    "mocha": "^6.2.2",
+    "passport-facebook": "^3.0.0",
+    "remove": "^0.1.5",
+    "sinon": "^7.5.0",
+    "supertest": "^4.0.2"
   },
   "engines": {
     "node": ">=0.12.0",
