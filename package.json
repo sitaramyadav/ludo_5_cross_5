@@ -30,7 +30,7 @@
     "body-parser": "^1.14.2",
     "cookie-parser": "^1.4.0",
     "express": "^4.13.3",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "mocha": "^6.2.2",
     "passport-facebook": "^3.0.0",
     "remove": "^0.1.5",
